@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <style>
+        section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .date {
+            width: 350px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: bold;
+            background: linear-gradient(to bottom, #a8c1d7 50%, #addee3 100%);
+            border: 5px solid #137C86;
+            border-radius: 10px;
+        }
+
+        .clock {
+            width: 350px;
+            height: 60px;
+            background-color: #1e1e2f;
+            border-radius: 10px;
+            font-family: "Orbitron", sans-serif;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+        }
+
+        .clock::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            z-index: -1;
+            background: linear-gradient(90deg, #00ffcc, #ff00c8);
+            border-radius: 10px;
+        }
+
+        #time {
+            color: transparent;
+            font-size: 2.4rem;
+            background: linear-gradient(90deg, #00ffcc, #ffff00, #ff00c8);
+            background-clip: text;
+            -webkit-background-clip: text;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <div class="date">
+            <span id="week">Wednesday,&nbsp;</span>
+            <span id="month">May&nbsp;</span>
+            <span id="date">19,&nbsp;</span>
+            <span id="year">2021</span>
+        </div>
+        <div class="clock">
+            <span id="time">05:43:23 PM</span>
+        </div>
+    </section>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
